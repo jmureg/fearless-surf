@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fearless-surf.com - Coming Soon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            color: #333333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666666;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .countdown {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+        .email-signup {
+            margin-top: 20px;
+        }
+        .email-signup input[type="email"] {
+            padding: 12px;
+            width: 70%;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+        .email-signup button {
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .email-signup button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Awesome Website is Coming Soon!</h1>
+        <p>We are working hard to bring you something amazing. Get ready for an exciting new experience!</p>
+<!--        <div class="countdown" id="countdown"></div>
+        <p>Enter your email below to be notified when we launch!</p> 
+        <div class="email-signup">
+            <input type="email" placeholder="Your Email Address">
+            <button>Notify Me</button>
+        </div>
+    </div>
+-->
+    <script>
+        // Set the launch date (Year, Month (0-indexed), Day, Hour, Minute, Second)
+        const launchDate = new Date("2026-01-01T00:00:00").getTime();
+
+        const updateCountdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(updateCountdown);
+                document.getElementById("countdown").innerHTML = "We are Live!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
