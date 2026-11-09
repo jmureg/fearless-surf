@@ -9,30 +9,37 @@
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
+            box-sizing: border-box;
             min-height: 100vh;
+            padding-bottom: 5vh;
             background-color: #f0f0f0;
+            background-image: url('background-2.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             margin: 0;
             text-align: center;
         }
         .container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             width: 90%;
+            color: #ffffff;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            color: #333333;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        .logo {
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            width: min(62vw, 480px);
+            height: auto;
+            transform: translate(-50%, -50%);
         }
         p {
-            color: #666666;
+            color: #ffffff;
             font-size: 1.1em;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 0;
         }
         .countdown {
             font-size: 1.8em;
@@ -68,9 +75,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>fearless-surf.com</h1>
+        <img class="logo" src="logo-white.png" alt="Fearless Surf">
         <h2>Our Awesome Website is Coming Soon!</h2>
-        <p>We are working hard to bring you something amazing. Get ready for an exciting new experience!</p>
+        <p>We are working hard to bring you something amazing. <br>Get ready for an exciting new experience!</p>
 <!--        <div class="countdown" id="countdown"></div>
         <p>Enter your email below to be notified when we launch!</p> 
         <div class="email-signup">
